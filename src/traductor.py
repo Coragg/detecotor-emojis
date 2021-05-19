@@ -1,13 +1,12 @@
-def censura(texto_original):
-    palabra = input("Ingrese palabra:")
+def emojis(texto, emoji, significado):
     i = 0
     nuevo = ""
-    while i < len(texto_original):
-        if palabra == texto_original[i:i + len(palabra)]:
-            nuevo += "*" * len(palabra)
-            i += len(palabra)
+    while i < len(texto):
+        if emoji == texto[i:i + len(emoji)]:
+            nuevo += f"{significado}" * len(emoji)
+            i += len(emoji)
         else:
-            nuevo += texto_original[i]
+            nuevo += texto[i]
             i += 1
     print("Texto censurado: ", nuevo)
-        
+
